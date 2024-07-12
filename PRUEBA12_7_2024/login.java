@@ -43,9 +43,11 @@ public class login extends JFrame{
                 menu catalogo = new menu();
                 catalogo.inciar();
             }
-            else {
-                JOptionPane.showMessageDialog(null,"El usaurio o contraseña se encuentran erroneos");
-            }
+        }
+        else {
+            JOptionPane.showMessageDialog(null,"El usaurio o contraseña se encuentran erroneos");
+            user.setText("");
+            password.setText("");
         }
         conectarse.close();
         strm.close();

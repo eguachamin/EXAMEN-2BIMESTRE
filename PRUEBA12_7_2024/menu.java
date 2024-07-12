@@ -9,12 +9,30 @@ public class menu extends JFrame{
     private JButton button1;
     private JRadioButton REGISTRARDATOSRadioButton;
     private JRadioButton BUSQUEDARadioButton;
+    private JPanel JPanel_menu;
 
     public menu() {
+        super("Menu Principal");
+        setContentPane(JPanel_menu);
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                login salir = new login();
+                salir.iniciar();
+            }
+        });
+        REGISTRARDATOSRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                registrar registro=new registrar();
+                registro.iniciar();
+            }
+        });
+        BUSQUEDARadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                busqueda busc = new busqueda();
+                busc.iniciar();
             }
         });
     }

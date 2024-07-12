@@ -21,7 +21,7 @@ public class registrar extends  JFrame{
 
     public registrar() {
         super("Registro de Items");
-
+        setContentPane(JPanel_Registro);
         REGISTRARButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -38,6 +38,7 @@ public class registrar extends  JFrame{
             public void actionPerformed(ActionEvent e) {
                 menu categoria=new menu();
                 categoria.inciar();
+                setVisible(false);
             }
         });
     }
@@ -50,7 +51,7 @@ public class registrar extends  JFrame{
         String categoria1=catego.getText();
 
         Connection connecta=conectar();
-        String sql= "INSERT INTO PRODUCTO (codigo_producto,nombre,descripcion,precio,cantidad, categoria)VALUES(?,?,?,?)";
+        String sql= "INSERT INTO PRODUCTO (codigo_producto,nombre,descripcion,precio,cantidad, categoria)VALUES(?,?,?,?,?,?)";
         PreparedStatement pstmt = connecta.prepareStatement(sql);
         pstmt.setString(1,codigo1);
         pstmt.setString(2,nombre1);
