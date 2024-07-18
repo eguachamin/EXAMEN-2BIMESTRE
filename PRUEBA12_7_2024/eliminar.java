@@ -24,6 +24,7 @@ public class eliminar extends JFrame{
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 }
+
             }
         });
         menuButton.addActionListener(new ActionListener() {
@@ -31,6 +32,7 @@ public class eliminar extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 menu salida3 = new menu();
                 salida3.inciar();
+                dispose();
             }
         });
         buscarButton.addActionListener(new ActionListener() {
@@ -41,6 +43,7 @@ public class eliminar extends JFrame{
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 }
+
             }
         });
     }

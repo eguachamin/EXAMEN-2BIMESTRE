@@ -21,6 +21,7 @@ public class menu extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 login salir = new login();
                 salir.iniciar();
+                dispose();
             }
         });
         REGISTRARDATOSRadioButton.addActionListener(new ActionListener() {
@@ -28,6 +29,7 @@ public class menu extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 registrar registro=new registrar();
                 registro.iniciar();
+                dispose();
             }
         });
         BUSQUEDARadioButton.addActionListener(new ActionListener() {
@@ -35,6 +37,7 @@ public class menu extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 busqueda busc = new busqueda();
                 busc.iniciar();
+                dispose();
             }
         });
         MODIFICARRadioButton.addActionListener(new ActionListener() {
@@ -42,6 +45,7 @@ public class menu extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 modificar modif = new modificar();
                 modif.iniciar();
+                dispose();
             }
         });
         ELIMINARRadioButton.addActionListener(new ActionListener() {
@@ -49,6 +53,7 @@ public class menu extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 eliminar ventana = new eliminar();
                 ventana.iniciar();
+                dispose();
             }
         });
     }
@@ -56,7 +61,7 @@ public class menu extends JFrame{
     public void inciar(){
         setVisible(true);
         setLocationRelativeTo(null);
-        setSize(400,500);
+        setSize(600,500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }

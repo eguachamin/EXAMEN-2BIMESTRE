@@ -30,6 +30,7 @@ public class registrar extends  JFrame{
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 }
+
             }
         });
 
@@ -39,6 +40,7 @@ public class registrar extends  JFrame{
                 menu categoria=new menu();
                 categoria.inciar();
                 setVisible(false);
+                dispose();
             }
         });
     }

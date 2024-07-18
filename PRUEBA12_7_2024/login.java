@@ -42,6 +42,7 @@ public class login extends JFrame{
             if (user2.equals(usuario1) && pass2.equals(pass)){
                 menu catalogo = new menu();
                 catalogo.inciar();
+                dispose();
             }
         }
         else {

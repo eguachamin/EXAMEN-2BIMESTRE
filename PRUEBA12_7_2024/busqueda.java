@@ -28,6 +28,7 @@ public class busqueda extends JFrame{
                 } catch (SQLException ex) {
                     menu salida = new menu();
                     salida.inciar();
+
                 }
             }
         });
@@ -36,6 +37,7 @@ public class busqueda extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 menu salida1 = new menu();
                 salida1.inciar();
+                dispose();
             }
         });
         limpiarButton.addActionListener(new ActionListener() {
@@ -81,7 +83,7 @@ public class busqueda extends JFrame{
     public void iniciar(){
         setVisible(true);
         setLocationRelativeTo(null);
-        setSize(400,500);
+        setSize(600,500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }

@@ -33,6 +33,7 @@ public class modificar extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 menu salir2 =new menu();
                 salir2.inciar();
+                dispose();
             }
         });
     }
