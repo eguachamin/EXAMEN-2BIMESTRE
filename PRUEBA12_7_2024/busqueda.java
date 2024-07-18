@@ -15,6 +15,7 @@ public class busqueda extends JFrame{
     private JLabel categ;
     private JLabel stock;
     private JButton menuButton;
+    private JButton limpiarButton;
 
     public busqueda() {
         super("Busqueda");
@@ -33,7 +34,18 @@ public class busqueda extends JFrame{
         menuButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                menu salida1 = new menu();
+                salida1.inciar();
+            }
+        });
+        limpiarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                busqueda.setText("");
+                name.setText("Nombre");
+                precio.setText("Precio");
+                categ.setText("Categoria");
+                stock.setText("Cantidad");
             }
         });
     }
@@ -52,6 +64,9 @@ public class busqueda extends JFrame{
                 categ.setText(rs.getString("categoria"));
                 stock.setText(rs.getString("cantidad"));
             }
+        }
+        else {
+            JOptionPane.showMessageDialog(null,"El codigo no existe, intente de nuevo");
         }
         connecta.close();
         pstmt.close();

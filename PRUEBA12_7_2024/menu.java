@@ -10,6 +10,8 @@ public class menu extends JFrame{
     private JRadioButton REGISTRARDATOSRadioButton;
     private JRadioButton BUSQUEDARadioButton;
     private JPanel JPanel_menu;
+    private JRadioButton MODIFICARRadioButton;
+    private JRadioButton ELIMINARRadioButton;
 
     public menu() {
         super("Menu Principal");
@@ -33,6 +35,20 @@ public class menu extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 busqueda busc = new busqueda();
                 busc.iniciar();
+            }
+        });
+        MODIFICARRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                modificar modif = new modificar();
+                modif.iniciar();
+            }
+        });
+        ELIMINARRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                eliminar ventana = new eliminar();
+                ventana.iniciar();
             }
         });
     }
