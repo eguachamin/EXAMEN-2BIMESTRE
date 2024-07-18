@@ -31,13 +31,13 @@ public class login extends JFrame{
         String usuario1= user.getText();
         String pass = password.getText();
         Connection conectarse = conectar();
-        String sql ="SELECT * FROM USUARIO WHERE username=? AND password=?";
+        String sql ="SELECT * FROM acceso WHERE usuario=? AND password=?";
         PreparedStatement strm = conectarse.prepareStatement(sql);
         strm.setString(1,usuario1);
         strm.setString(2,pass);
         ResultSet rs = strm.executeQuery();
         if (rs.next()){
-            String user2=rs.getString("username");
+            String user2=rs.getString("usuario");
             String pass2=rs.getString("password");
             if (user2.equals(usuario1) && pass2.equals(pass)){
                 menu catalogo = new menu();
@@ -46,7 +46,7 @@ public class login extends JFrame{
             }
         }
         else {
-            JOptionPane.showMessageDialog(null,"El usaurio o contraseña se encuentran erroneos");
+            JOptionPane.showMessageDialog(null,"El usuario o contraseña se encuentran erroneos");
             user.setText("");
             password.setText("");
         }
@@ -56,9 +56,9 @@ public class login extends JFrame{
     }
 
     public Connection conectar() throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/productos_cp";
-        String usurious="root";
-        String password1="";
+        String url = "jdbc:mysql://uceiprz5lnyxwcun:2MEuIBNxrt0DUkvVbQaE@bi7ej80dgemnxzfdcj4h-mysql.services.clever-cloud.com:3306/bi7ej80dgemnxzfdcj4h";
+        String usurious="uceiprz5lnyxwcun";
+        String password1="2MEuIBNxrt0DUkvVbQaE";
 
         return DriverManager.getConnection(url,usurious,password1);
     }

@@ -75,9 +75,9 @@ public class registrar extends  JFrame{
         connecta.close();
     }
     public Connection conectar() throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/productos_cp";
-        String usurious="root";
-        String password1="";
+        String url = "jdbc:mysql://uceiprz5lnyxwcun:2MEuIBNxrt0DUkvVbQaE@bi7ej80dgemnxzfdcj4h-mysql.services.clever-cloud.com:3306/bi7ej80dgemnxzfdcj4h";
+        String usurious="uceiprz5lnyxwcun";
+        String password1="2MEuIBNxrt0DUkvVbQaE";
 
         return DriverManager.getConnection(url,usurious,password1);
     }
