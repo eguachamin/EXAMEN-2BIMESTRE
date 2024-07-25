@@ -1,5 +1,6 @@
 package CONEXION_NUBE;
 
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,7 +8,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
+    /**
+     *CLASE ELIMINAR
+     *
+     *<p><a href="https://youtu.be/L8eRzOYhLuw?si=gATc77OG2-6TBQ-9">Video de Youtube</a></p>
+     * @author Evelyn
+     * @version 1.0
+     * @see eliminar1#conectar()
+    * */
 public class eliminar1 extends JFrame{
     private JRadioButton REGISTRORadioButton;
     private JPanel JPanel_Elimi;
@@ -15,6 +23,10 @@ public class eliminar1 extends JFrame{
     private JButton ELIMINARButton;
     private JButton MENUButton;
 
+    /**
+    * Método Constructor
+    *
+    * */
     public eliminar1() {
         super("ELIMINAR");
         setContentPane(JPanel_Elimi);
@@ -54,6 +66,13 @@ public class eliminar1 extends JFrame{
         conecct.close();
         cod_busc.setText("");
     }
+    /**
+    * Indica lo que devuelve el método
+    *
+    * @return DriverManager.getConnection(url,user,pass);
+     * @deprecated {@link #iniciar()}
+    * ayuda a la conección en el método que se va a utilizar
+    * */
     public Connection conectar() throws SQLException {
         String url = "jdbc:mysql://uzkbu5ogetqorsi9:1Kwlp5ZUmsW8z9u0iuFh@bcjr18avtrqj7jmwdeko-mysql.services.clever-cloud.com:3306/bcjr18avtrqj7jmwdeko";
         String user = "uzkbu5ogetqorsi9";
